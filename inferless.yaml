@@ -40,6 +40,6 @@ optional:
   input_file_name: input.json
   output_file_name: output.json
   runtime_file_name: inferless-runtime-config.yaml
-model_url: https://github.com/rbgo404/TenyxChat-8x7B-v1.git
+model_url: https://github.com/inferless/TenyxChat-8x7B-v1.git
 provider: GITHUB
 io_schema: true
