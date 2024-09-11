@@ -5,4 +5,4 @@ build:
     - "transformers==4.36.2"
     - "accelerate==0.25.0"
     - "scipy==1.11.4"
-    - "bitsandbytes==0.43.3"
+    - "bitsandbytes==0.42.0"
