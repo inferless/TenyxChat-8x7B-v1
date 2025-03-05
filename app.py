@@ -1,9 +1,13 @@
+import os
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"]='1'
+from huggingface_hub import snapshot_download
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, pipeline
 
 class InferlessPythonModel:
     def initialize(self):
         model_id = "tenyx/TenyxChat-8x7B-v1"
+        snapshot_download(repo_id=model_id,allow_patterns=["*.safetensors"])
         bnb_config = BitsAndBytesConfig(
             load_in_4bit=True,
             bnb_4bit_quant_type="nf4",
