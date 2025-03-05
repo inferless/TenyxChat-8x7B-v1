@@ -6,4 +6,5 @@ build:
     - "accelerate==0.25.0"
     - "scipy==1.11.4"
     - "bitsandbytes==0.42.0"
-    - "huggingface-hub==0.25.2"
+    - "hf-transfer==0.1.9"
+    - "huggingface-hub==0.29.1"
