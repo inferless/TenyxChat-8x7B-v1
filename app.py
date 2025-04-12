@@ -16,7 +16,7 @@ class InferlessPythonModel:
             )
         tokenizer = AutoTokenizer.from_pretrained(model_id)
         model = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True, quantization_config=bnb_config)
-        self.pipe = pipeline("text-generation", model=model, tokenizer=tokenizer,device="cuda")
+        self.pipe = pipeline("text-generation", model=model, tokenizer=tokenizer)
         
     def infer(self, inputs):
         prompt = inputs["prompt"]
